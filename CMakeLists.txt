@@ -68,20 +68,20 @@ add_custom_command(
 )
 
 #2 - windows 
-message(" ### Add post build event : ./${PROJECT_NAME}.exe")
-add_custom_command(
-	TARGET ${PROJECT_NAME} POST_BUILD
-	COMMAND ${CMAKE_COMMAND} -E echo "POST_BUILD:Launch an app after build."
-	COMMAND ${FULL_PATH_TO_EXECUTABLE} 
-)
+#message(" ### Add post build event : ./${PROJECT_NAME}.exe")
+#add_custom_command(
+#	TARGET ${PROJECT_NAME} POST_BUILD
+#	COMMAND ${CMAKE_COMMAND} -E echo "POST_BUILD:Launch an app after build."
+#	COMMAND ${FULL_PATH_TO_EXECUTABLE} 
+#)
 endif(WINDOWS)
 
 #2 - linux 
-if(LINUX)
-message(" ### Add post build event : ./${PROJECT_NAME}")
-add_custom_command(
-	TARGET ${PROJECT_NAME} POST_BUILD
-	COMMAND ${CMAKE_COMMAND} -E echo "POST_BUILD:Launch an app after build."
-	COMMAND ${FULL_PATH_TO_EXECUTABLE} 
-)
-endif(LINUX)
+#if(LINUX)
+#message(" ### Add post build event : ./${PROJECT_NAME}")
+#add_custom_command(
+#	TARGET ${PROJECT_NAME} POST_BUILD
+#	COMMAND ${CMAKE_COMMAND} -E echo "POST_BUILD:Launch an app after build."
+#	COMMAND ${FULL_PATH_TO_EXECUTABLE} 
+#)
+#endif(LINUX)
